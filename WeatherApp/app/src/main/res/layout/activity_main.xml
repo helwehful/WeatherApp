@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgorund"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/city_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="City" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_tv"
+        tools:text="+12" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temp_feel_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/feeling"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temp_feel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp_feel_title_tv"
+        tools:text="+15" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/min_temp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/temp_tv"
+        app:layout_constraintEnd_toStartOf="@id/temp_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="+10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/max_temp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/temp_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/temp_tv"
+        tools:text="+15" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weather_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp_feel_tv"
+        tools:src="@drawable/ic_snow" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/weather_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_iv"
+        tools:text="Туман" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/wind_speed_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_state_tv"
+        tools:text="Скорость ветра: 228" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sunrise_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_sunrise"
+        app:layout_constraintEnd_toEndOf="@id/sunrise_tv"
+        app:layout_constraintStart_toStartOf="@id/sunrise_tv"
+        app:layout_constraintTop_toBottomOf="@id/wind_speed_tv" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sunset_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_sunset"
+        app:layout_constraintEnd_toEndOf="@id/sunset_tv"
+        app:layout_constraintStart_toStartOf="@id/sunset_tv"
+        app:layout_constraintTop_toBottomOf="@id/wind_speed_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sunrise_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/sunrise"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/sunset_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sunrise_iv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sunrise_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/sunrise_tv"
+        app:layout_constraintStart_toStartOf="@id/sunrise_tv"
+        app:layout_constraintTop_toBottomOf="@id/sunrise_tv"
+        tools:text="6 00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sunset_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/sunset"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sunrise_tv"
+        app:layout_constraintTop_toTopOf="@id/sunrise_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sunset_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/sunset_tv"
+        app:layout_constraintStart_toStartOf="@id/sunset_tv"
+        app:layout_constraintTop_toBottomOf="@id/sunset_tv"
+        tools:text="16 00" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/service_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/start_stop_location_listening"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
